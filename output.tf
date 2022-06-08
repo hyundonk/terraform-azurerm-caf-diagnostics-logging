@@ -13,6 +13,7 @@ output "diagnostics_map" {
             "diags_sa_primary_access_key", azurerm_storage_account.log.primary_access_key,
             "eh_name",  var.enable_event_hub == true ? azurerm_eventhub_namespace.log[0].name : null,
             "eh_id", var.enable_event_hub == true ? azurerm_eventhub_namespace.log[0].id : null,
+            "primary_connection_string", azurerm_storage_account.log.primary_connection_string,
         )
     }"
 }
